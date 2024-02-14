@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { signal } from '@angular/core';
-import { FormControl, ReactiveFormsModule } from '@angular/forms';
+import { FormControl, ReactiveFormsModule, Validators } from '@angular/forms';
 
 
 @Component({
@@ -33,6 +33,14 @@ export class LabsComponent {
   //creamos un control para el ancho y 50 es el valor por defecto.
   widthCtrl = new FormControl(50, {
     nonNullable: true,
+  });
+
+  nameCtrl = new FormControl('luis', {
+    nonNullable: true,
+    validators: [
+      Validators.required,
+      Validators.minLength(3),
+    ]
   });
 
   constructor(){
