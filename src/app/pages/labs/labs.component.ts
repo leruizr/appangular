@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { signal } from '@angular/core';
 import { FormControl, ReactiveFormsModule, Validators } from '@angular/forms';
 
@@ -7,7 +7,7 @@ import { FormControl, ReactiveFormsModule, Validators } from '@angular/forms';
 @Component({
   selector: 'app-labs',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [ReactiveFormsModule],
   templateUrl: './labs.component.html',
   styleUrl: './labs.component.css'
 })
@@ -24,8 +24,8 @@ export class LabsComponent {
   img = 'https://w3schools.com/howto/img_avatar.png';
 
   person = signal({
-    name: 'luis',
-    age: 17,
+    name: 'Luis',
+    age: 37,
     avatar: 'https://w3schools.com/howto/img_avatar.png'
   });
 
